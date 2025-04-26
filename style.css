@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.start-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: 100vh;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid grey;
+  padding: 10px 20px;
+  width: 350px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.input-box input,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: black;
+  width: 100%;
+}
+
+.input-box input,
+select :active {
+  border: 2px solid #ccc;
+}
+
+.username {
+  color: black;
+}
+
+.box-gun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box-gun .box-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box-gun .box-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box-gun img {
+  width: 100px;
+  height: 100px;
+}
+
+.target-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0px 20px;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-box .btn-1 {
+  padding: 10px 20px;
+  border: none;
+  background-color: green;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.button-box .btn-2 {
+  padding: 10px 20px;
+  border: none;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.target-box img {
+  width: 100px;
+  height: 100px;
+}
+
+.wrapper-instruction {
+  background: #000;
+  padding: 10px 25px;
+  width: 450px;
+  height: 400px;
+  color: white;
+  position: relative;
+}
+
+.wrapper-instruction h2 {
+  margin-bottom: 20px;
+}
+
+.wrapper-instruction ol {
+  padding-left: 10px;
+}
+
+.wrapper-instruction ol li {
+  margin: 10px 0px;
+  padding-left: 4px;
+}
+
+.btn-close {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  border: none;
+  background-color: red;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+}
+
+#game-area {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.game-box {
+  display: flex;
+}
+
+.bg .img-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+
+.gun {
+  position: absolute;
+  bottom: 0;
+  width: 500px;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.target {
+    position: absolute;
+    width: 150px;
+    height: 120px;
+    z-index: 1;
+    user-select: none;
+    background: url("img/target.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+.crosshair {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  z-index: 3;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hide-cursor {
+    cursor: none;
+}
+
+.leaderboard {
+  background-color: black;
+  color: white;
+  padding: 20px 10px;
+  width: 300px;
+}
+
+.leaderboard h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.leaderboard-list {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+.leaderboard-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.leaderboard-item .leaderboard-name {
+  font-weight: 600;
+}
+
+.leaderboard-item .leaderboard-score {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.btn-leaderboard {
+  border: none;
+  padding: 10px;
+  background-color: yellow;
+  font-style: italic;
+}

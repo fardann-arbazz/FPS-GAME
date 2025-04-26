@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game FPS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="start-menu">
+        <div class="wrapper">
+            <h1 class="logo">SHOOTER GAME</h1>
+            <div class="input-box">
+                <input type="text" class="username" id="username" placeholder="Enter your name" required>
+                <select name="level" id="level">
+                    <option value="" selected>Select a level</option>
+                    <option value="30">Easy</option>
+                    <option value="20">Medium</option>
+                    <option value="15">Hard</option>
+                </select>
+            </div>
+            <div class="box-gun">
+                <div class="box-1">
+                    <img src="img/gun 1.png" alt="gun 1" class="gun-1">
+                    <input type="radio" name="gun" id="gun-1">
+                </div>
+                <div class="box-2">
+                    <img src="img/gun 2.png" alt="gun 2" class="gun-2">
+                    <input type="radio" name="gun2" id="gun-2">
+                </div>
+            </div>
+            <div class="target-box">
+                <img src="img/target.png" alt="target-menu" class="target-menu">
+                <input type="radio" name="target" id="target-1">
+            </div>
+            <div class="button-box">
+                <button class="btn-1" onclick="startGame()">Play Game</button>
+                <button class="btn-2">Instruction</button>
+            </div>
+        </div>
+        <div class="wrapper-instruction" style="display: none;">
+            <h2>How to play game</h2>
+            <button class="btn-close">X</button>
+            <ol>
+                <li>Input username</li>
+                <li>Point the pointer at the target</li>
+                <li>Click to shoot</li>
+                <li>Get as many points as possible</li>
+                <li>Enjoy!</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="game-box" style="display: none;">
+        <div id="game-area">
+            <div class="bg">
+                <img src="img/background.jpg" alt="backgroynd" class="img-bg">
+            </div>
+            <div class="hud">
+                <div class="player-name" id="player-name">Fardan</div>
+                <span>Score <span id="score">0</span></span>
+                <span>Time <span id="time">0:00</span></span>
+            </div>
+            <img src="img/crosshair.png" alt="crosshair" class="crosshair" id="crosshair"
+                style="top: 200px; left: 5rem;">
+            <img src="img/gun 1.png" alt="gun" class="gun" id="gun">
+            <div id="target-container"></div>
+        </div>
+        <div class="leaderboard" id="leaderboard">
+            <h3>LEADERBOARD</h3>
+            <div class="leaderboard-list">
+                <div class="leaderboard-item">
+                    <span class="leaderboard-name">Thomas Galih</span>
+                    <span class="leaderboard-score">Score: 44</span>
+                </div>
+                <button class="btn-leaderboard">Detail</button>
+            </div>
+        </div>
+    </div>
+    <img src="img/splash.png" alt="effect" id="impact-effect"
+        style="display: none; width: 60px; position: absolute; pointer-events: none;">
+</body>
+
+</html>
