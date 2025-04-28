@@ -116,6 +116,22 @@ function spawnTarget() {
   newTarget.style.position = "absolute";
 
   targetContainer.appendChild(newTarget);
+
+  let direction = Math.random() > 0.5 ? 1 : -1
+    let speed = Math.random() * 2 + 1;
+
+    const moveInterval = setInterval(() => {
+        x += direction * speed;
+        newTarget.style.left = ${x}px;
+
+        if(x < 0 || x > maxX) {
+            clearInterval(moveInterval)
+            newTarget.remove()
+            if (document.querySelectorAll('.target').length < TARGET_COUNT) {
+                spawnTarget();
+            } 
+        }
+    }, 20)
 }
 
 function generateTarget(count) {
